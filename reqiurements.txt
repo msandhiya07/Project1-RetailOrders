@@ -1,5 +1,4 @@
 streamlit
 pg8000
 pandas
-matplotlib
-plotly
+numpy
