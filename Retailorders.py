@@ -33,7 +33,7 @@ def run_query(query):
 st.markdown("<h1 style='text-align: center; color: black;'>Guvi Data Science</h1>", unsafe_allow_html=True)
 
 st.markdown("<h1 style='text-align: center;'> MINI PROJECT </h1>", unsafe_allow_html=True)
-st.markdown("<h2 style='text-align: center;'> Retail-Orders-Dashboard </h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center;'> Retail Orders Dashboard </h2>", unsafe_allow_html=True)
 
 
 
