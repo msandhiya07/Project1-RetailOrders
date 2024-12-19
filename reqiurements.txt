@@ -1,4 +1,4 @@
-streamlit
-pg8000
 pandas
-numpy
+numpy 
+pg8000 
+streamlit 
