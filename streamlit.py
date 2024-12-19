@@ -91,13 +91,13 @@ guvi_queries = {
 nav = st.sidebar.radio("Navigation", ["GUVI QUERIES", "Queries"])
 
 # Query selection based on navigation
-if nav == "GUVI QUERIES":
-    st.subheader("GUVI QUERIES")
+if nav == "Guvi queries":
+    st.subheader("select a query")
     query = st.selectbox("Select a query to visualize:", list(guvi_queries.keys()))
     selected_query_set = guvi_queries  
 
-elif nav == "Queries":
-    st.subheader("SELF QUERIES")
+elif nav == "Self Queries":
+    st.subheader("select a query")
     query = st.selectbox("Select a query to visualize:", list(self_queries.keys()))
     selected_query_set = self_queries  
 
