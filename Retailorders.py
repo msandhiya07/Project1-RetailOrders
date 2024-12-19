@@ -58,7 +58,7 @@ self_queries ={# type: ignore
 "SELECT SUM(sale_price) AS total FROM orders2;",
 "max, min, avg":# type: ignore 
 "SELECT MAX(sale_price) AS highest_revenue, MIN(sale_price) AS minimum_sales, AVG(sale_price) AS average_sales FROM orders2;",
-"Calculte ranking saleprice":# type: ignore
+"Calculate ranking saleprice":# type: ignore
 "SELECT order_id, quantity, sale_price, ROW_NUMBER() OVER (PARTITION BY sub_category ORDER BY sale_price DESC) AS rank FROM orders2;",
 "Calculate discount by 20%":# type: ignore
 "SELECT o2.order_id, o1.category, o2.sub_category, o2.sale_price,20 AS discount_percentage, (o2.sale_price * 20 / 100) AS discount_value FROM orders1 o1 JOIN orders2 o2 ON o1.order_id = o2.order_id;"
