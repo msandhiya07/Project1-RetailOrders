@@ -38,15 +38,15 @@ st.markdown("<h2 style='text-align: center;'> Retail Orders Dashboard </h2>", un
 
 
 self_queries ={# type: ignore
-"displaying all tables": 
+"view table 1": 
 "SELECT * FROM orders1;",
-"selecting all from orders2": 
+"view table 2": 
 "SELECT * FROM orders2;",
-"joining order1 and order2 tables":
+"Retail orders table":
 "SELECT * FROM orders1 AS o1 JOIN orders2 AS o2 ON o1.order_id = o2.order_id;",
 "ordering cities alphabetically": 
 "SELECT * FROM orders1  ORDER BY city ASC;",
-"joining o1 order_id with o2 products": 
+"order id with products": 
 "SELECT o1.order_id, o2.sub_category AS products FROM orders1 o1 INNER JOIN orders2 o2 ON o1.order_id = o2.order_id;",
 "total saleprice":
 "SELECT order_id, SUM(sale_price) AS sale_price FROM orders2 GROUP BY order_id ORDER BY sale_price DESC LIMIT 10;",
@@ -58,9 +58,9 @@ self_queries ={# type: ignore
 "SELECT SUM(sale_price) AS total FROM orders2;",
 "max, min, avg":# type: ignore 
 "SELECT MAX(sale_price) AS highest_revenue, MIN(sale_price) AS minimum_sales, AVG(sale_price) AS average_sales FROM orders2;",
-"ranking saleprice":# type: ignore
+"Calculte ranking saleprice":# type: ignore
 "SELECT order_id, quantity, sale_price, ROW_NUMBER() OVER (PARTITION BY sub_category ORDER BY sale_price DESC) AS rank FROM orders2;",
-"discount by 20%":# type: ignore
+"Calculate discount by 20%":# type: ignore
 "SELECT o2.order_id, o1.category, o2.sub_category, o2.sale_price,20 AS discount_percentage, (o2.sale_price * 20 / 100) AS discount_value FROM orders1 o1 JOIN orders2 o2 ON o1.order_id = o2.order_id;"
 }
 guvi_queries = {
